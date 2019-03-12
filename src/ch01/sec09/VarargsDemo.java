@@ -6,7 +6,8 @@ public class VarargsDemo {
         for (double v : values) sum += v;
         return values.length == 0 ? 0 : sum / values.length;
     }    
-    
+
+    // 가변 매개변수는 반드시 메서드의 마지막 매개변수여야 한다.
     public static double max(double first, double... rest) {
         double result = first;
         for (double v : rest) result = Math.max(v, result);

@@ -10,37 +10,40 @@ public class ArrayListDemo {
         ArrayList<String> friends = new ArrayList<>();
         friends.add("Peter");
         friends.add("Paul");
+        System.out.println("friends" + friends);
         friends.remove(1);
         friends.add(0, "Paul"); // 인덱스 0 앞에 추가한다.
-        System.out.println("friends=" + friends);
+        System.out.println("friends" + friends);
+
         String first = friends.get(0);
         System.out.println("first=" + first);
-        friends.set(1, "Mary");
-        for (int i = 0; i < friends.size(); i++) {
-            System.out.println(friends.get(i));
+        friends.set(1,"Mary");
+        for(String sf : friends) {
+            System.out.println(sf);
         }
-        
+
         ArrayList<String> people = friends;
-        people.set(0, "Mary"); // 이제 friends.get(0)도 "Mary"를 반환한다.
+        people.set(0,"Mary"); // 이제 friends.get(0)도 "Mary"를 반환한다.
         System.out.println("friends=" + friends);
-        
+
         ArrayList<String> copiedFriends = new ArrayList<>(friends);
         copiedFriends.set(0, "Fred"); // friends를 변경하지 않는다.
         System.out.println("copiedFriends=" + copiedFriends);
-        System.out.println("friends=" + friends);
-        
+        System.out.println("Friends=" + friends);
+
         friends = new ArrayList<>(List.of("Peter", "Paul", "Mary"));
+        friends.set(0,"Kim");
         String[] names = friends.toArray(new String[0]);
-        System.out.println("names=" + Arrays.toString(names));               
-        
+        System.out.println("names=" + Arrays.toString(names));
+
         ArrayList<String> moreFriends = new ArrayList<>(List.of(names));
-        System.out.println("moreFriends=" + moreFriends);         
-        
+        System.out.println("moreFriends=" + moreFriends);
+
         Collections.reverse(friends);
         System.out.println("After reversing, friends=" + friends);
         Collections.shuffle(friends);
         System.out.println("After shuffling, friends=" + friends);
-        Collections.sort(friends);        
+        Collections.sort(friends);
         System.out.println("After sorting, friends=" + friends);
     }
 }

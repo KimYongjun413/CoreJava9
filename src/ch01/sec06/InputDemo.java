@@ -5,14 +5,14 @@ import java.util.Scanner;
 public class InputDemo {
     public static void main(String[] args) {
         Scanner in = new Scanner(System.in);
-        System.out.println("What is your name?");
+        System.out.println("너 이름이 뭐니?");
         String name = in.nextLine();
-        System.out.println("How old are you?");
-        if (in.hasNextInt()) {
+        System.out.println("몇살이니?");
+        if(in.hasNextInt()) {
             int age = in.nextInt();
             System.out.printf("Hello, %s. Next year, you'll be %d.\n", name, age + 1);
-        } else {
-            System.out.printf("Hello, %s. Are you too young to enter an integer?", name);
+        }else{
+            System.out.printf("Hello, %s, Are you too young to enter an integer?", name);
         }
     }
 }
