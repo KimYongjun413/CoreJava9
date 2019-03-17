@@ -2,6 +2,7 @@ package ch01.exercise;
 
 public class exercise05 {
     public static void main(String[] args){
+        System.out.println("\n[문제5]\nint의 최댓값보다 큰 double을 int타입으로 변환하면 무슨 일이 일어나는가? 직접 시도해 보라.\n");
         System.out.println("\n16비트 부호 없는 정수의 최댓값 : " + (int) Character.MAX_VALUE );// 65535
         System.out.println("32비트 부호 있는 정수의 최댓값 : " + Integer.MAX_VALUE);// 2147483647
 
